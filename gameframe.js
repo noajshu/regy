@@ -15,7 +15,7 @@ var targetArray = [{type:"evil", body:"shark", pos:{x:30, y:50}, v:{x:0.3, y:0.1
 
 
 function addTarget(theType, theBody, speedAcross){
-	var newTarget = {type:};
+	// var newTarget = {type:};
 }
 
 
@@ -44,7 +44,7 @@ function reDraw() {
 			target.pos.x += target.v.x;
 			target.pos.y += target.v.y;
 			ctx.strokeText(target.body, target.pos.x, target.pos.y);
-			if(target.pos.y > ctx.height - 10 || target.pos.y < 10){
+			if(target.pos.y > ctx.height - || target.pos.y < 10){
 				target.v.y = -target.v.y;
 			}
 		}
