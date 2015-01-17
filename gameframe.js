@@ -7,14 +7,36 @@ var userView = document.getElementById("userView");
 
 var c = document.getElementById("userCanvas");
 var ctx = c.getContext("2d");
-ctx.fillStyle = "#FF0000";
+// ctx.fillStyle = "#FF0000";
 // ctx.fillRect(0,0,150,75);
-
 ctx.font = "30px Arial";
 // ctx.fillText("Hello World",10,50);
 ctx.strokeText("Hello World",10,50);
 
 var targetArray = [{type:"evil", body:"meow3_12.tps"}, {type:"evil", body:"meow5_21.tps"}];
+
+
+var FPS = 60;
+
+
+function updateStrikes() {
+	// go through targetArray for regex matches & destroy these strings
+}
+
+function reDraw() {
+	for(var i=0; i<targetArray.length; i++) {
+		ctx.strokeText(targetArray[i].body, 0, 0);
+	}
+}
+
+function loop() {
+	updateStrikes();
+	reDraw();
+}
+
+setInterval (loop, 1000/FPS);
+
+
 
 
 function userEnter(cmd) {
@@ -29,6 +51,7 @@ function userEnter(cmd) {
 
 
 function applyRegExp(userRegExp) {
+	// kill matches
 	for(var i=0; i<targetArray.length; i++) {
 		console.log(userRegExp.exec(targetArray[i].body));
 	}
