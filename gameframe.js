@@ -45,7 +45,7 @@ function reDraw() {
 			target.pos.x += target.v.x;
 			target.pos.y += target.v.y;
 			ctx.strokeText(target.body, target.pos.x, target.pos.y);
-			if(target.pos.y > ctx.height - yMargin || target.pos.y < yMargin){
+			if(target.pos.y > c.height - yMargin || target.pos.y < yMargin){
 				target.v.y = -target.v.y;
 			}
 		}
