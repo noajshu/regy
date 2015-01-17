@@ -10,6 +10,9 @@ var ctx = c.getContext("2d");
 ctx.fillStyle = "#FF0000";
 ctx.fillRect(0,0,150,75);
 
+ctx.font = "30px Arial";
+ctx.fillText("Hello World",10,50);
+
 var targetArray = [{type:"evil", body:"meow3_12.tps"}, {type:"evil", body:"meow5_21.tps"}];
 
 
