@@ -4,6 +4,7 @@ var cmdBox = document.getElementById("userCommand");
 var consoleDiv = document.getElementById("userConsole");
 var userView = document.getElementById("userView");
 
+var yMargin = 15;
 
 var c = document.getElementById("userCanvas");
 var ctx = c.getContext("2d");
@@ -44,7 +45,7 @@ function reDraw() {
 			target.pos.x += target.v.x;
 			target.pos.y += target.v.y;
 			ctx.strokeText(target.body, target.pos.x, target.pos.y);
-			if(target.pos.y > ctx.height - || target.pos.y < 10){
+			if(target.pos.y > ctx.height - yMargin || target.pos.y < yMargin){
 				target.v.y = -target.v.y;
 			}
 		}
