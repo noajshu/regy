@@ -22,20 +22,16 @@ function clearCanvas() {
 function loopOnTargets(func) {
 	var ret = [];
 	for(var i=0; i<targetArray.length; i++) {
-		ret.push(func(targetArray[i]));
+		ret.push(func(i, targetArray[i]));
 	}
 	return ret;
 }
 
-function updateStrikes() {
-	// go through targetArray for regex matches & destroy these strings
-	// also do animation update of targetarray
-}
 
 function reDraw() {
 	clearCanvas();
 	loopOnTargets(
-		function(target){
+		function(i, target){
 			target.pos.x += target.v.x;
 			target.pos.y += target.v.y;
 			ctx.strokeText(target.body, target.pos.x, target.pos.y);
@@ -44,7 +40,6 @@ function reDraw() {
 }
 
 function loop() {
-	updateStrikes();
 	reDraw();
 }
 
@@ -64,13 +59,29 @@ function userEnter(cmd) {
 }
 
 
+
 function applyRegExp(userRegExp) {
 	// kill matches
 	for(var i=0; i<targetArray.length; i++) {
 		console.log(userRegExp.exec(targetArray[i].body));
 	}
-}
+	
+	// go through targetArray for regex matches & destroy these strings
+	// also do animation update of targetArray
+	
+	var tempTargets = [];
+	
+	loopOnTargets(
+		function(i, target){
+			if(!target.body.match(userRegExp)){
+				tempTargets.push(target);
+			}
+		}
+	);
 
+	targetArray = tempTargets;
+
+}
 
 
 
