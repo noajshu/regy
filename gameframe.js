@@ -33,7 +33,7 @@ function reDraw() {
 		function(target){
 			ctx.strokeText{target.body, 10, 50, 300);
 		}
-	)
+	);
 }
 
 function loop() {
