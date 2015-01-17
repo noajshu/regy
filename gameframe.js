@@ -15,6 +15,10 @@ var targetArray = [{type:"evil", body:"meow3_12.tps", pos:{x:10, y:15}, v:{x:10,
 
 var FPS = 60;
 
+function clearCanvas() {
+	ctx.clearRect (0, 0, c.width, c.height);
+}
+
 function loopOnTargets(func) {
 	var ret = [];
 	for(var i=0; i<targetArray.length; i++) {
@@ -33,6 +37,7 @@ function reDraw() {
 		function(target){
 			target.pos.x += target.v.x;
 			target.pos.y += target.v.y;
+			clearCanvas();
 			ctx.strokeText(target.body, target.pos.x, target.pos.y);
 		}
 	);
