@@ -20,7 +20,7 @@ function addTarget(theType, theBody, speedAcross){
 
 
 
-targetProperties = {evil:}
+// targetProperties = {evil:}
 
 var FPS = 60;
 
