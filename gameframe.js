@@ -4,14 +4,24 @@ var cmdBox = document.getElementById("userCommand");
 var consoleDiv = document.getElementById("userConsole");
 var userView = document.getElementById("userView");
 
-function userEnter(cmd){
+var targetArray = [{type:"evil", body:"meow3_12.tps"}, {type:"evil", body:"meow5_21.tps"}];
+
+
+function userEnter(cmd) {
 	console.log("pressed enter");
 	console.log("command = "+cmd);
 
-	var userRegExp = RegExp(cmd);
+	var userRegExp = new RegExp(cmd);
+	consoleDiv.innerHTML = userRegExp;
+	
+	applyRegExp(userRegExp);
+}
 
-	consoleDiv.innerHTML += userRegExp;
 
+function applyRegExp(userRegExp) {
+	for(var i=0; i<targetArray.length; i++) {
+		console.log(userRegExp.exec(targetArray[i].body));
+	}
 }
 
 
