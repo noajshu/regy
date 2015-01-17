@@ -60,7 +60,6 @@ setInterval (loop, 1000/FPS);
 
 
 
-
 function userEnter(cmd) {
 	console.log("pressed enter");
 	console.log("command = "+cmd);
