@@ -33,11 +33,11 @@ function updateStrikes() {
 }
 
 function reDraw() {
+	clearCanvas();
 	loopOnTargets(
 		function(target){
 			target.pos.x += target.v.x;
 			target.pos.y += target.v.y;
-			clearCanvas();
 			ctx.strokeText(target.body, target.pos.x, target.pos.y);
 		}
 	);
