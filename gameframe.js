@@ -26,17 +26,15 @@ cmdBox.addEventListener("keydown", function (event) {
   }
 
   var handled = false;
-  if (event.key !== undefined) {
-  	console.log(event.key);
-    // Handle the event with KeyboardEvent.key and set handled true.
-  }
-  if (event.keyIdentifier !== undefined) {
-  	console.log(event.keyIdentifier);
-    // Handle the event with KeyboardEvent.keyIdentifier and set handled true.
-  }
+
   if (event.keyCode !== undefined) {
-    console.log(event.keyCode);
     // Handle the event with KeyboardEvent.keyCode and set handled true.
+    if(event.keyCode == 13) {
+    	//user has pressed enter
+    	playerEnter();
+    }
+
+    handled = true;
   }
 
   if (handled) {
