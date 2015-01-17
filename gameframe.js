@@ -32,9 +32,12 @@ cmdBox.addEventListener("keydown", function (event) {
     if(event.keyCode == 13) {
     	//user has pressed enter
     	playerEnter();
+	    handled = true;
     }
+    // else if(true) {
+    // 	cmdBox.value += 
+    // }
 
-    handled = true;
   }
 
   if (handled) {
