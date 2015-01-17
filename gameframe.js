@@ -27,8 +27,10 @@ cmdBox.addEventListener("keydown", function (event) {
 
   var handled = false;
   if (event.key !== undefined) {
+  	console.log(event.key);
     // Handle the event with KeyboardEvent.key and set handled true.
   } else if (event.keyIdentifier !== undefined) {
+  	console.log(event.keyIdentifier);
     // Handle the event with KeyboardEvent.keyIdentifier and set handled true.
   } else if (event.keyCode !== undefined) {
     console.log(event.keyCode);
