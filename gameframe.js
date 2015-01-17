@@ -11,7 +11,7 @@ var ctx = c.getContext("2d");
 // ctx.fillRect(0,0,150,75);
 ctx.font = "10px Arial";
 
-var targetArray = [{type:"evil", body:"meow3_12.tps", x:10, y:15}, {type:"evil", body:"meow5_21.tps", x:30, y:40}];
+var targetArray = [{type:"evil", body:"meow3_12.tps", pos:{x:10, y:15}}, {type:"evil", body:"meow5_21.tps", x:30, y:40}];
 
 var FPS = 60;
 
@@ -31,7 +31,7 @@ function updateStrikes() {
 function reDraw() {
 	loopOnTargets(
 		function(target){
-			ctx.strokeText(target.body, target.x, target.y, 300);
+			ctx.strokeText(target.body, target.pos.x, target.pos.y, 300);
 		}
 	);
 }
