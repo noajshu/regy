@@ -25,7 +25,7 @@ function updateStrikes() {
 
 function reDraw() {
 	for(var i=0; i<targetArray.length; i++) {
-		ctx.strokeText(targetArray[i].body, 10, 50, 10);
+		ctx.strokeText(targetArray[i].body, 10, 50, 40);
 	}
 }
 
