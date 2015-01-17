@@ -11,7 +11,16 @@ var ctx = c.getContext("2d");
 // ctx.fillRect(0,0,150,75);
 ctx.font = "10px Arial";
 
-var targetArray = [{type:"evil", body:"meow3_12.tps", pos:{x:30, y:50}, v:{x:0.3, y:0.1}}, {type:"evil", body:"meow5_21.tps", pos:{x:30, y:40}, v:{x:0.2, y:0.1}}];
+var targetArray = [{type:"evil", body:"shark", pos:{x:30, y:50}, v:{x:0.3, y:0.1}}, {type:"evil", body:"meow5_21.tps", pos:{x:30, y:40}, v:{x:0.2, y:0.1}}];
+
+
+function addTarget(theType, theBody, speedAcross){
+	var newTarget = {type:};
+}
+
+
+
+targetProperties = {evil:}
 
 var FPS = 60;
 
@@ -35,6 +44,9 @@ function reDraw() {
 			target.pos.x += target.v.x;
 			target.pos.y += target.v.y;
 			ctx.strokeText(target.body, target.pos.x, target.pos.y);
+			if(target.pos.y > ctx.height - 10 || target.pos.y < 10){
+				target.v.y = -target.v.y;
+			}
 		}
 	);
 }
