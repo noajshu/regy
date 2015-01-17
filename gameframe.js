@@ -11,7 +11,7 @@ var ctx = c.getContext("2d");
 // ctx.fillRect(0,0,150,75);
 ctx.font = "10px Arial";
 
-var targetArray = [{type:"evil", body:"meow3_12.tps", pos:{x:30, y:50}, v:{x:0.3, y:1}}, {type:"evil", body:"meow5_21.tps", pos:{x:30, y:40}, v:{x:0.2, y:1}}];
+var targetArray = [{type:"evil", body:"meow3_12.tps", pos:{x:30, y:50}, v:{x:0.3, y:0.1}}, {type:"evil", body:"meow5_21.tps", pos:{x:30, y:40}, v:{x:0.2, y:0.1}}];
 
 var FPS = 60;
 
