@@ -10,8 +10,6 @@ var ctx = c.getContext("2d");
 // ctx.fillStyle = "#FF0000";
 // ctx.fillRect(0,0,150,75);
 ctx.font = "10px Arial";
-// ctx.fillText("Hello World",10,50);
-// ctx.strokeText("Hello World", 10, 50);
 
 var targetArray = [{type:"evil", body:"meow3_12.tps"}, {type:"evil", body:"meow5_21.tps"}];
 
@@ -25,7 +23,7 @@ function updateStrikes() {
 
 function reDraw() {
 	for(var i=0; i<targetArray.length; i++) {
-		ctx.strokeText(targetArray[i].body, 10, 50, 40);
+		ctx.strokeText(targetArray[i].body, 10, 50, 80);
 	}
 }
 
