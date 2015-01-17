@@ -18,7 +18,7 @@ var FPS = 60;
 function loopOnTargets(func) {
 	var ret = [];
 	for(var i=0; i<targetArray.length; i++) {
-		ret.push(func(targetarray[i]));
+		ret.push(func(targetArray[i]));
 	}
 	return ret;
 }
