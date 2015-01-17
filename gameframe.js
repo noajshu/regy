@@ -18,5 +18,5 @@ function playerEnter(){
 
 var userReg = RegExp("ab*c");
 
-var cmdBox = document.getElementById("userComman")
+var cmdBox = document.getElementById("userCommand")
 cmdBox.onkeydown = playerEnter;
