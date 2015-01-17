@@ -13,18 +13,27 @@ ctx.font = "10px Arial";
 
 var targetArray = [{type:"evil", body:"meow3_12.tps"}, {type:"evil", body:"meow5_21.tps"}];
 
-
 var FPS = 60;
 
+function loopOnTargets(func) {
+	var ret = [];
+	for(var i=0; i<targetArray.length; i++) {
+		ret.push(func(targetarray[i]));
+	}
+	return ret;
+}
 
 function updateStrikes() {
 	// go through targetArray for regex matches & destroy these strings
+	// also do animation update of targetarray
 }
 
 function reDraw() {
-	for(var i=0; i<targetArray.length; i++) {
-		ctx.strokeText(targetArray[i].body, 10, 50, 300);
-	}
+	loopOnTargets(
+		function(target){
+			ctx.strokeText{target.body, 10, 50, 300);
+		}
+	)
 }
 
 function loop() {
