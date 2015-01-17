@@ -31,7 +31,9 @@ function updateStrikes() {
 function reDraw() {
 	loopOnTargets(
 		function(target){
-			ctx.strokeText(target.body, target.pos.x, target.pos.y, 300);
+			target.pos.x += target.v.x;
+			target.pos.y += target.v.y;
+			ctx.strokeText(target.body, target.pos.x, target.pos.y);
 		}
 	);
 }
