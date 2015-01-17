@@ -1,1 +1,9 @@
-div {width:400px; text-align:center;}
+div {
+	width:400px; text-align:center;
+}
+h1 {
+    color: #00CC66;
+}
+h2 {
+	color: #CC0000;
+}

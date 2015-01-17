@@ -4,6 +4,12 @@ var cmdBox = document.getElementById("userCommand");
 var consoleDiv = document.getElementById("userConsole");
 var userView = document.getElementById("userView");
 
+
+var c = document.getElementById("userCanvas");
+var ctx = c.getContext("2d");
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(0,0,150,75);
+
 var targetArray = [{type:"evil", body:"meow3_12.tps"}, {type:"evil", body:"meow5_21.tps"}];
 
 
