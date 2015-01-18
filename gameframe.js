@@ -188,10 +188,13 @@ function applyRegExp(userRegExp) {
 	
 	var tempTargets = [];
 	
+	var didWin=true;
+
 	loopOnTargets(
 		function(i, target){
 			if(!target.body.match(userRegExp)){
 				tempTargets.push(target);
+				if(target.type == "evil")didWin ==false;
 			}
 			else{
 				
@@ -205,6 +208,10 @@ function applyRegExp(userRegExp) {
 			}
 		}
 	);
+
+	if(didWin) {
+		Win();
+	}
 
 	targetArray = tempTargets;
 
@@ -240,6 +247,7 @@ cmdBox.addEventListener("keydown", function (event) {
 
 function Win() {
 // should congratulate winner
+	console.log("winner");
 	window.location = "?level="+(theLevel + 1).toString();
 }
 
