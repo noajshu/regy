@@ -38,14 +38,7 @@ function avgCat(theBody) {
 
 
 var level0 = {levelTargets:[avgShark("shark_0")], levelInfo:"Type 'shark' to kill the shark"};
-var level1 = {levelTargets:[avgShark("shark_0")], levelInfo:"Type nothing--let the cat live"};
+var level1 = {levelTargets:[avgCat("shark_0")], levelInfo:"Type nothing--do not kill the cat"};
 
 
-
-
-
-
-
-
-
-var levelData =[level0]
+var levelData =[level0, level1];
