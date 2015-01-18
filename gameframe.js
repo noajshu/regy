@@ -279,7 +279,7 @@ cmdBox.addEventListener("keydown", function (event) {
 function Win() {
 // should congratulate winner
 	console.log("winner");
-	window.setTimeout(function() {window.location = "?level="+(theLevel + 1).toString();}, 600);
+	window.setTimeout(function() {window.location = "?level="+(theLevel + 1).toString();}, 900);
 }
 
 
@@ -290,7 +290,7 @@ function Lose(failState) {
 		// console.log("lost");
 		if(failState== "catDead")alert("You killed a cat!");
 		else if(failState == "sharkAlive")alert("You left a shark alive!");
-		window.setTimeout(function() {window.location = "?level="+(theLevel).toString();}, 600 );
+		window.setTimeout(function() {window.location = "?level="+(theLevel).toString();}, 900 );
 		alreadyLose = true;
 	}
 }
