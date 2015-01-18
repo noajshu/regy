@@ -46,7 +46,7 @@ function drawTarget(target) {
 		ctx.drawImage(sharkImg, target.pos.x, target.pos.y);
 	}
 	else if(target.type == "good") {
-		ctx.drawImage(catImg, target.pos.x, target.pos.y);
+		ctx.drawImage(catImg, target.pos.x, target.pos.y, 10, 10);
 	}
 
 	ctx.strokeText(target.body, target.pos.x, target.pos.y);
