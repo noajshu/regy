@@ -170,6 +170,7 @@ function reDraw() {
 				// safe
 				if(target.type=="evil"){
 					Shark.play(); //ie, the shark made it across
+					Shark.src=null;
 					Lose("sharkAlive");
 				}
 				else if(target.type =="good") {
