@@ -194,7 +194,14 @@ function applyRegExp(userRegExp) {
 				tempTargets.push(target);
 			}
 			else{
-				SoundBoard[target.type].play();
+				
+				if(target.type == "evil") {
+					SoundBoard[target.type].play();
+				}
+				else if(target.type == "good") {
+					// also should play sad cat sound
+					Lose();
+				}
 			}
 		}
 	);
@@ -231,7 +238,15 @@ cmdBox.addEventListener("keydown", function (event) {
   }
 }, true);
 
+function Win() {
+// should congratulate winner
+	window.location = "?level="+(theLevel + 1).toString();
+}
 
+function Lose() {
+// should shame loser
+	window.location = "?level="+(theLevel).toString();
+}
 
 
 
