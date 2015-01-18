@@ -2,6 +2,7 @@ console.log('hi');
 
 var url = $.url();
 
+var theLevel = 0;
 var queryLevel = url.attr('query').split('&')[0].split('=')[1];
 // if(queryLevel != undefined){
 // 	theLevel = parseInt(queryLevel);
