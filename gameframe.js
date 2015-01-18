@@ -141,6 +141,16 @@ function drawTarget(target) {
 	ctx.fillText(target.body, target.pos.x, target.pos.y);
 }
 
+var safeCats = 0;
+var numCats = 0;
+var safeSharks = 0;
+var numSharks = 0;
+
+for(var i=0; i<targetArray.length; i++) {
+	if(targetArray[i].type="good")numCats++;
+	else numSharks++;
+}
+
 function reDraw() {
 	clearCanvas();
 	loopOnTargets(
@@ -153,13 +163,31 @@ function reDraw() {
 			if(target.pos.y > c.height - yMargin || target.pos.y < yMargin){
 				target.v.y = -target.v.y;
 			}
+
+			if(target.pos.x > c.width){
+				// safe
+				if(target.type=="evil"){
+					Shark.play();
+					Lose();
+				}
+				else if(target.type =="good") {
+					Meow.play();
+					safeCats ++;
+				}
+			}
 		}
 	);
 }
 
+
 function loop() {
 	reDraw();
+	if(safeCats == numCats && deadSharks == numSharks) {
+		Win();
+	}
 }
+
+
 
 setInterval (loop, 1000/FPS);
 
@@ -188,13 +216,14 @@ function applyRegExp(userRegExp) {
 	
 	var tempTargets = [];
 	
-	var didWin=true;
+	var didKillAllSharks=true;
+	var didKillNoCats=true;
 
 	loopOnTargets(
 		function(i, target){
 			if(!target.body.match(userRegExp)){
 				tempTargets.push(target);
-				if(target.type == "evil")didWin ==false;
+				if(target.type == "evil")didKillAllSharks ==false;
 			}
 			else{
 				
@@ -202,16 +231,17 @@ function applyRegExp(userRegExp) {
 					SoundBoard[target.type].play();
 				}
 				else if(target.type == "good") {
+					didKillNoCats == false;
 					// also should play sad cat sound
-					Lose();
 				}
 			}
 		}
 	);
 
-	if(didWin) {
-		Win();
-	}
+	if(!didKillNoCats)Lose();
+
+
+	if(didKillNoCats && didKillAllSharks)
 
 	targetArray = tempTargets;
 
