@@ -170,6 +170,7 @@ function reDraw() {
 				if(target.type=="evil"){
 					Shark.play(); //ie, the shark made it across
 					Lose("sharkAlive");
+					break;
 				}
 				else if(target.type =="good") {
 					Meow.play();
