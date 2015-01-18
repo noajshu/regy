@@ -58,7 +58,7 @@ function drawTarget(target) {
 	}
 
 	ctx.fillStyle = "#FFA319";
-	ctx.font = "10px Arial";
+	ctx.font = "20px Arial";
 	ctx.fillText(target.body, target.pos.x, target.pos.y);
 }
 
