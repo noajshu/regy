@@ -2,6 +2,7 @@ console.log('hi');
 
 var Shark=document.getElementById("SharkAudio");
 var Meow=document.getElementById("MeowAudio");
+var SadMeow=document.getElementById("SadMeowAudio");
 
 
 var url = $.url();
@@ -237,6 +238,7 @@ function applyRegExp(userRegExp) {
 				else if(target.type == "good") {
 					didKillNoCats = false;
 					// also should play sad cat sound
+					SadMeow.play();
 				}
 			}
 		}
