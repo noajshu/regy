@@ -43,6 +43,7 @@ function loopOnTargets(func) {
 
 function drawTarget(target) {
 	if(target.type == "evil"){
+		console.log("evil");
 		ctx.drawImage(sharkImg, target.pos.x, target.pos.y);
 	}
 	else if(target.type == "good") {
