@@ -1,3 +1,4 @@
+var alreadyLose = false;
 console.log('hi');
 
 var Shark=document.getElementById("SharkAudio");
@@ -170,8 +171,8 @@ function reDraw() {
 			if(target.pos.x > c.width){
 				// safe
 				if(target.type=="evil"){
-					Shark.play(); //ie, the shark made it across
-					window.setTimeout(function() {Shark.src=null;}, 750);					
+					if(!alreadyLose)Shark.play(); //ie, the shark made it across
+					// window.setTimeout(function() {Shark.src=null;}, 750);					
 					Lose("sharkAlive");
 				}
 				else if(target.type =="good") {
@@ -285,8 +286,6 @@ function Win() {
 	window.setTimeout(function() {window.location = "?level="+(theLevel + 1).toString();}, 900);
 }
 
-
-var alreadyLose = false;
 function Lose(failState) {
 // should shame loser
 	if(!alreadyLose){
