@@ -16,7 +16,7 @@ var widthCat = heightCat * aspectCat;
 
 var sharkImg = new Image();
 sharkImg.src = "pixel_shark_1.png";
-var aspectShark = 1;
+var aspectShark = 1.62;
 var heightShark = c.height * 0.25;
 var widthShark = heightShark * aspectShark;
 
