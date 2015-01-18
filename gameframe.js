@@ -169,7 +169,7 @@ function reDraw() {
 				// safe
 				if(target.type=="evil"){
 					Shark.play(); //ie, the shark made it across
-					Lose();
+					Lose("sharkAlive");
 				}
 				else if(target.type =="good") {
 					Meow.play();
@@ -240,7 +240,7 @@ function applyRegExp(userRegExp) {
 		}
 	);
 
-	if(!didKillNoCats)Lose();
+	if(!didKillNoCats)Lose("catDead");
 
 
 	targetArray = tempTargets;
@@ -281,9 +281,11 @@ function Win() {
 	window.setTimeout(function() {window.location = "?level="+(theLevel + 1).toString();}, 600);
 }
 
-function Lose() {
+function Lose(failState) {
 // should shame loser
 	console.log("lost");
+	if(failState== "catDead")alert("You killed a cat!");
+	else if(failState == "sharkAlive")alert("You left a shark alive!");
 	window.setTimeout(function() {window.location = "?level="+(theLevel).toString();}, 600 );
 }
 
