@@ -37,8 +37,8 @@ function getrP(){
 	return({x:0, y:document.getElementById("userCanvas").height * getRandomFactor()/2});
 }
 
-var sharkAvgSpeed = 4;
-var catAvgSpeed = 3;
+var sharkAvgSpeed = 5;
+var catAvgSpeed = 4;
 
 function avgShark(theBody) {
 	return {v:getrV(sharkAvgSpeed), pos:getrP(), type:"evil", body:theBody };
@@ -51,9 +51,10 @@ function avgCat(theBody) {
 
 
 
-var level0 = {levelTargets:[avgShark("evil_shark")], levelInfo:"This is an evil shark"};
+var level0 = {levelTargets:[avgShark("evil_shark")], levelInfo:"This is an evil shark. Kill it with a regex substring command."};
 var level1 = {levelTargets:[avgCat("nice_cat")], levelInfo:"Type nothing--do not kill the cat"};
-var level2 = {levelTargets:[avgCat("animal0"), avgShark("animal1")], levelInfo:"Type nothing--do not kill the cat"};
+var level2 = {levelTargets:[avgCat("animal0"), avgShark("animal1")], levelInfo:"Kill the shark, but not the cat"};
+var level3 = {levelTargets:[avgCat("animal0"), avgShark("animal1"), avgShark("1animal"), avgShark("ani1mal"), avgShark("anima1l")], levelInfo:"You must eliminate all sharks in time."};
 
 
 
