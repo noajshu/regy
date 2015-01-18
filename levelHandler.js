@@ -26,6 +26,6 @@ function getrP(){
 var sharkAvgSpeed = 20;
 var catAvgSpeed = 17;
 
-var level0 = [levelTargets:{v:getrV(sharkAvgSpeed), pos:getrP(), type:"evil", body:"shark" }, levelInfo:"Type shark"];
+var level0 = {levelTargets:[{v:getrV(sharkAvgSpeed), pos:getrP(), type:"evil", body:"shark" }], levelInfo:"Type shark"};
 
 var levelData =[level0]
