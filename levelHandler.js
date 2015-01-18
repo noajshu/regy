@@ -12,6 +12,9 @@ else{
 	theLevel = parseInt(queryLevel);
 }
 
+console.log("current level = ");
+console.log(theLevel);
+
 var cmdBox = document.getElementById("userCommand");
 var consoleDiv = document.getElementById("userConsole");
 var userView = document.getElementById("userView");
