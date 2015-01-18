@@ -13,13 +13,13 @@ ctx.font = "10px Arial";
 var catImg = new Image();
 catImg.src = "pixel_cat_1.png";
 var aspectCat = 1.56;
-var heightCat = c.height * 0.05;
+var heightCat = c.height * 0.15;
 var widthCat = heightCat * aspectCat;
 
 var sharkImg = new Image();
 sharkImg.src = "pixel_shark_1.png";
 var aspectShark = 1;
-var heightShark = c.height * 0.05;
+var heightShark = c.height * 0.15;
 var widthShark = heightShark * aspectShark;
 
 var yMargin = 15;
