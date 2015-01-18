@@ -8,7 +8,7 @@ var catImg = new Image();
 catImg.src = "pixel_cat_1.png";
 
 var sharkImg = new Image();
-sharkImg.src = "pixel_shark_1.gif";
+sharkImg.src = "pixel_shark_1.png";
 
 var yMargin = 15;
 
