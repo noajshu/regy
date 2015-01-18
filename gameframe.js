@@ -6,8 +6,7 @@ var userView = document.getElementById("userView");
 
 var c = document.getElementById("userCanvas");
 var ctx = c.getContext("2d");
-// ctx.fillStyle = "#FF0000";
-// ctx.fillRect(0,0,150,75);
+ctx.fillStyle = "#FFA319";
 ctx.font = "10px Arial";
 
 var catImg = new Image();
