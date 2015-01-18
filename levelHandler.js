@@ -9,7 +9,7 @@ var ctx = c.getContext("2d");
 
 
 function getRandomFactor() { //get random factor
-	return Math.random() + 0.5;
+	return Math.random()/2 + 0.75;
 }
 
 function getrV(avgSpeed){
