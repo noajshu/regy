@@ -1,5 +1,8 @@
 console.log('hi');
 
+var Shark=document.getElementById("SharkAudio");
+var Meow=document.getElementById("MeowAudio");
+
 var url = $.url();
 
 var theLevel = 0;
@@ -188,6 +191,9 @@ function applyRegExp(userRegExp) {
 		function(i, target){
 			if(!target.body.match(userRegExp)){
 				tempTargets.push(target);
+			}
+			else{
+				{"good":Meow, "evil":Shark}[target.type].play();
 			}
 		}
 	);
