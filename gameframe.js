@@ -175,7 +175,7 @@ function userEnter(cmd) {
 	applyRegExp(userRegExp);
 }
 
-
+var SoundBoard = {"good":Meow, "evil":Shark};
 
 function applyRegExp(userRegExp) {
 	// kill matches
@@ -194,7 +194,7 @@ function applyRegExp(userRegExp) {
 				tempTargets.push(target);
 			}
 			else{
-				{"good":Meow, "evil":Shark}[target.type].play();
+				SoundBoard[target.type].play();
 			}
 		}
 	);
