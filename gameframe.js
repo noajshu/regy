@@ -4,6 +4,12 @@ var cmdBox = document.getElementById("userCommand");
 var consoleDiv = document.getElementById("userConsole");
 var userView = document.getElementById("userView");
 
+var c = document.getElementById("userCanvas");
+var ctx = c.getContext("2d");
+// ctx.fillStyle = "#FF0000";
+// ctx.fillRect(0,0,150,75);
+ctx.font = "10px Arial";
+
 var catImg = new Image();
 catImg.src = "pixel_cat_1.png";
 var aspectCat = 1.56;
@@ -18,11 +24,6 @@ var widthShark = heightShark * aspectShark;
 
 var yMargin = 15;
 
-var c = document.getElementById("userCanvas");
-var ctx = c.getContext("2d");
-// ctx.fillStyle = "#FF0000";
-// ctx.fillRect(0,0,150,75);
-ctx.font = "10px Arial";
 
 var targetArray = [{type:"evil", body:"shark", pos:{x:30, y:50}, v:{x:0.3, y:0.1}}, {type:"good", body:"meow5_21.tps", pos:{x:30, y:40}, v:{x:0.2, y:0.1}}];
 
