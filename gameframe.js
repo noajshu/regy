@@ -53,7 +53,7 @@ function avgCat(theBody) {
 
 var level0 = {levelTargets:[avgShark("evil_shark")], levelInfo:"This is an evil shark. Kill it with a regex substring command."};
 var level1 = {levelTargets:[avgCat("nice_cat")], levelInfo:"Type nothing--do not kill the cat"};
-var level2 = {levelTargets:[avgCat("animal0"), avgShark("animal1")], levelInfo:"Kill the shark, but not the cat"};
+var level2 = {levelTargets:[avgCat("animal0"), avgShark("animal1")], levelInfo:"Kill the shark, but let the cat cross"};
 var level3 = {levelTargets:[avgCat("animal0"), avgShark("animal1"), avgShark("1animal"), avgShark("ani1mal"), avgShark("anima1l")], levelInfo:"You must eliminate all sharks in time."};
 
 
@@ -170,7 +170,7 @@ function reDraw() {
 				// safe
 				if(target.type=="evil"){
 					Shark.play(); //ie, the shark made it across
-					Shark.src=null;
+					window.setTimeout(function() {Shark.src=null;}, 950);					
 					Lose("sharkAlive");
 				}
 				else if(target.type =="good") {
