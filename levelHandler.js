@@ -2,8 +2,6 @@ console.log('hi');
 
 var url = $.url();
 
-
-var theLevel = 0;
 var queryLevel = url.attr('query').split('&')[0].split('=')[1];
 // if(queryLevel != undefined){
 // 	theLevel = parseInt(queryLevel);
@@ -46,8 +44,28 @@ function avgCat(theBody) {
 }
 
 
-var level0 = {levelTargets:[avgShark("evil_shark")], levelInfo:"Type a substring of the shark's name to kill the shark"};
+
+
+var level0 = {levelTargets:[avgShark("evil_shark")], levelInfo:"This is an evil shark"};
 var level1 = {levelTargets:[avgCat("nice_cat")], levelInfo:"Type nothing--do not kill the cat"};
+var level1 = {levelTargets:[avgCat("animal0"), avgShark("animal1")], levelInfo:"Type nothing--do not kill the cat"};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 var levelData =[level0, level1];
