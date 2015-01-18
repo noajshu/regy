@@ -5,9 +5,9 @@ var url = $.url();
 
 var theLevel = 0;
 var queryLevel = url.attr('query').split('&')[0].split('=')[1];
-if(queryLevel != undefined){
-	theLevel = parseInt(queryLevel);
-}
+// if(queryLevel != undefined){
+// 	theLevel = parseInt(queryLevel);
+// }
 
 console.log("current level = ");
 console.log(theLevel);
