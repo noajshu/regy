@@ -5,10 +5,7 @@ var url = $.url();
 
 var theLevel = 0;
 var queryLevel = url.attr('query').split('&')[0].split('=')[1];
-if(queryLevel == undefined){
-	theLevel = 0;
-}
-else{
+if(queryLevel != undefined){
 	theLevel = parseInt(queryLevel);
 }
 
@@ -54,3 +51,6 @@ var level1 = {levelTargets:[avgCat("nice_cat")], levelInfo:"Type nothing--do not
 
 
 var levelData =[level0, level1];
+
+
+
