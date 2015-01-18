@@ -28,6 +28,24 @@ function getrP(){
 var sharkAvgSpeed = 2;
 var catAvgSpeed = 1.7;
 
-var level0 = {levelTargets:[{v:getrV(sharkAvgSpeed), pos:getrP(), type:"evil", body:"shark" }], levelInfo:"Type 'shark' to kill the shark"};
+function avgShark(theBody) {
+	return {v:getrV(sharkAvgSpeed), pos:getrP(), type:"evil", body:theBody };
+}
+
+function avgCat(theBody) {
+	return {v:getrV(catAvgSpeed), pos:getrP(), type:"good", body:theBody };
+}
+
+
+var level0 = {levelTargets:[avgShark("shark_0")], levelInfo:"Type 'shark' to kill the shark"};
+var level1 = {levelTargets:[avgShark("shark_0")], levelInfo:"Type nothing--let the cat live"};
+
+
+
+
+
+
+
+
 
 var levelData =[level0]
