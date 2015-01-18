@@ -10,13 +10,16 @@ var aspectShark = 1.62;
 var heightShark = c.height * 0.25;
 var widthShark = heightShark * aspectShark;
 
+var infoBox = document.getElementById("infoConsole");
+
 var yMargin = 15;
 
 
 // var targetArray = [{type:"evil", body:"shark", pos:{x:40, y:250}, v:{x:0.3, y:0.1}}, {type:"good", body:"meow5_21.tps", pos:{x:30, y:40}, v:{x:0.2, y:0.1}}];
 
 var theLevel = 0;
-var targetArray = levelData[theLevel];
+var targetArray = levelData[theLevel].levelTargets;
+infoBox.innerHTML = levelData[theLevel].levelInfo;
 
 // function addTarget(theType, theBody, speedAcross){
 // 	levelData[theLevel]
