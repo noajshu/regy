@@ -15,6 +15,7 @@ function getRandomFactor() { //get random factor
 function getrV(avgSpeed){
 	vel = avgSpeed * getRandomFactor();
 	angle = getRandomFactor() * 3.14159 / 2;
+	console.log({x:Math.sin(vel), y:Math.cos(vel)});
 	return({x:Math.sin(vel), y:Math.cos(vel)});
 }
 
