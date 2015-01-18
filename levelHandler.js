@@ -1,5 +1,8 @@
 console.log('hi');
 
+var url = $.url();
+console.log(url.attr('query').split('&')[0].split('=')[1]);
+
 var cmdBox = document.getElementById("userCommand");
 var consoleDiv = document.getElementById("userConsole");
 var userView = document.getElementById("userView");
