@@ -282,6 +282,7 @@ function Win() {
 
 function Lose() {
 // should shame loser
+	console.log("lost");
 	window.location = "?level="+(theLevel).toString();
 }
 
