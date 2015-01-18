@@ -51,10 +51,10 @@ function loopOnTargets(func) {
 
 function drawTarget(target) {
 	if(target.type == "evil"){
-		ctx.drawImage(sharkImg, target.pos.x - widthShark/2, target.pos.y - heightShark/2, widthShark, heightShark);
+		ctx.drawImage(sharkImg, target.pos.x, target.pos.y, widthShark, heightShark);
 	}
 	else if(target.type == "good") {
-		ctx.drawImage(catImg, target.pos.x - widthCat/2, target.pos.y - heightCat/2, widthCat, heightCat);
+		ctx.drawImage(catImg, target.pos.x, target.pos.y, widthCat, heightCat);
 	}
 
 	ctx.fillStyle = "#FFA319";
