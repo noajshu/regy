@@ -74,7 +74,7 @@ var level3 = {levelTargets:[avgCat("animal0"), avgShark("animal1"), avgShark("1a
 
 
 
-var levelData =[level0, level1, level2];
+var levelData =[level0, level1, level2, level3];
 
 
 
