@@ -233,7 +233,7 @@ function applyRegExp(userRegExp) {
 					deadSharks++;
 				}
 				else if(target.type == "good") {
-					didKillNoCats == false;
+					didKillNoCats = false;
 					// also should play sad cat sound
 				}
 			}
