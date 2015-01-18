@@ -5,7 +5,7 @@ var consoleDiv = document.getElementById("userConsole");
 var userView = document.getElementById("userView");
 
 var catImg = new Image();
-catImg.src = "pixel_cat_1.gif";
+catImg.src = "pixel_cat_1.png";
 
 var sharkImg = new Image();
 sharkImg.src = "pixel_shark_1.gif";
@@ -46,7 +46,6 @@ function drawTarget(target) {
 		console.log("evil");
 		// ctx.drawImage(sharkImg, target.pos.x, target.pos.y);
 		ctx.drawImage(sharkImg, 0, 0, 1000, 1000);
-		break;
 	}
 	else if(target.type == "good") {
 		ctx.drawImage(catImg, target.pos.x, target.pos.y);
