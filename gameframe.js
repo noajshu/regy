@@ -1,13 +1,3 @@
-console.log('hi');
-
-var cmdBox = document.getElementById("userCommand");
-var consoleDiv = document.getElementById("userConsole");
-var userView = document.getElementById("userView");
-
-var c = document.getElementById("userCanvas");
-var ctx = c.getContext("2d");
-
-
 var catImg = new Image();
 catImg.src = "pixel_cat_1.png";
 var aspectCat = 1.56;
@@ -23,9 +13,10 @@ var widthShark = heightShark * aspectShark;
 var yMargin = 15;
 
 
-var targetArray = [{type:"evil", body:"shark", pos:{x:40, y:250}, v:{x:0.3, y:0.1}}, {type:"good", body:"meow5_21.tps", pos:{x:30, y:40}, v:{x:0.2, y:0.1}}];
+// var targetArray = [{type:"evil", body:"shark", pos:{x:40, y:250}, v:{x:0.3, y:0.1}}, {type:"good", body:"meow5_21.tps", pos:{x:30, y:40}, v:{x:0.2, y:0.1}}];
 
 var theLevel = 0;
+var targetArray = levelData[theLevel];
 
 // function addTarget(theType, theBody, speedAcross){
 // 	levelData[theLevel]
