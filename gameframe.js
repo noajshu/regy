@@ -4,8 +4,11 @@ var cmdBox = document.getElementById("userCommand");
 var consoleDiv = document.getElementById("userConsole");
 var userView = document.getElementById("userView");
 
-var catImg = document.getElementById("catImg");
-var sharkImg = document.getElementById("sharkImg");
+var catImg = new Image();
+catImg.src = "pixel_cat_1.gif";
+
+var sharkImg = new Image();
+sharkImg.src = "pixel_shark_1.gif";
 
 var yMargin = 15;
 
@@ -45,7 +48,7 @@ function drawTarget(target) {
 	else if(target.type == "good") {
 		ctx.drawImage(catImg, target.pos.x, target.pos.y);
 	}
-	
+
 	ctx.strokeText(target.body, target.pos.x, target.pos.y);
 }
 
