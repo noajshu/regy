@@ -143,7 +143,7 @@ function drawTarget(target) {
 
 var safeCats = 0;
 var numCats = 0;
-var safeSharks = 0;
+var deadSharks = 0;
 var numSharks = 0;
 
 for(var i=0; i<targetArray.length; i++) {
@@ -167,7 +167,7 @@ function reDraw() {
 			if(target.pos.x > c.width){
 				// safe
 				if(target.type=="evil"){
-					Shark.play();
+					Shark.play(); //ie, the shark made it across
 					Lose();
 				}
 				else if(target.type =="good") {
@@ -229,6 +229,7 @@ function applyRegExp(userRegExp) {
 				
 				if(target.type == "evil") {
 					SoundBoard[target.type].play();
+					deadSharks++;
 				}
 				else if(target.type == "good") {
 					didKillNoCats == false;
@@ -240,8 +241,6 @@ function applyRegExp(userRegExp) {
 
 	if(!didKillNoCats)Lose();
 
-
-	if(didKillNoCats && didKillAllSharks)
 
 	targetArray = tempTargets;
 
