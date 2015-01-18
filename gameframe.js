@@ -25,11 +25,14 @@ var widthShark = heightShark * aspectShark;
 var yMargin = 15;
 
 
-var targetArray = [{type:"evil", body:"shark", pos:{x:30, y:50}, v:{x:0.3, y:0.1}}, {type:"good", body:"meow5_21.tps", pos:{x:30, y:40}, v:{x:0.2, y:0.1}}];
+// var targetArray = [{type:"evil", body:"shark", pos:{x:30, y:50}, v:{x:0.3, y:0.1}}, {type:"good", body:"meow5_21.tps", pos:{x:30, y:40}, v:{x:0.2, y:0.1}}];
 
+var theLevel = 0;
 
 function addTarget(theType, theBody, speedAcross){
-	// var newTarget = {type:};
+	levelData[theLevel]
+
+	var newTarget = {type:};
 }
 
 // targetProperties = {evil:}
@@ -50,10 +53,10 @@ function loopOnTargets(func) {
 
 function drawTarget(target) {
 	if(target.type == "evil"){
-		ctx.drawImage(sharkImg, target.pos.x, target.pos.y, widthShark, heightShark);
+		ctx.drawImage(sharkImg, target.pos.x - widthShark/2, target.pos.y - heightShark/2, widthShark, heightShark);
 	}
 	else if(target.type == "good") {
-		ctx.drawImage(catImg, target.pos.x, target.pos.y, widthCat, heightCat);
+		ctx.drawImage(catImg, target.pos.x - widthCat/2, target.pos.y - heightCat/2, widthCat, heightCat);
 	}
 
 	ctx.strokeText(target.body, target.pos.x, target.pos.y);
