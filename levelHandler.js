@@ -19,7 +19,7 @@ function getrV(avgSpeed){
 }
 
 function getrP(){
-	return({x:0, y:c.height * getRandomFactor()/2});
+	return({x:0, y:document.getElementById("userCanvas").height * getRandomFactor()/2});
 }
 
 var sharkAvgSpeed = 20;
