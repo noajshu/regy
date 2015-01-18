@@ -28,11 +28,11 @@ var yMargin = 15;
 
 var theLevel = 0;
 
-function addTarget(theType, theBody, speedAcross){
-	levelData[theLevel]
+// function addTarget(theType, theBody, speedAcross){
+// 	levelData[theLevel]
 
-	var newTarget = {type:};
-}
+// 	var newTarget = {type:};
+// }
 
 // targetProperties = {evil:}
 
