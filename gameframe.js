@@ -4,6 +4,9 @@ var cmdBox = document.getElementById("userCommand");
 var consoleDiv = document.getElementById("userConsole");
 var userView = document.getElementById("userView");
 
+var catImg = document.getElementById("catImg");
+var sharkImg = document.getElementById("sharkImg");
+
 var yMargin = 15;
 
 var c = document.getElementById("userCanvas");
@@ -18,8 +21,6 @@ var targetArray = [{type:"evil", body:"shark", pos:{x:30, y:50}, v:{x:0.3, y:0.1
 function addTarget(theType, theBody, speedAcross){
 	// var newTarget = {type:};
 }
-
-
 
 // targetProperties = {evil:}
 
@@ -37,6 +38,16 @@ function loopOnTargets(func) {
 	return ret;
 }
 
+function drawTarget(target) {
+	if(target.type == "evil"){
+		ctx.drawImage(sharkImg, target.pos.x, target.pos.y);
+	}
+	else if(target.type == "good") {
+		ctx.drawImage(catImg, target.pos.x, target.pos.y);
+	}
+	
+	ctx.strokeText(target.body, target.pos.x, target.pos.y);
+}
 
 function reDraw() {
 	clearCanvas();
@@ -44,7 +55,9 @@ function reDraw() {
 		function(i, target){
 			target.pos.x += target.v.x;
 			target.pos.y += target.v.y;
-			ctx.strokeText(target.body, target.pos.x, target.pos.y);
+			
+			drawTarget(target);
+
 			if(target.pos.y > c.height - yMargin || target.pos.y < yMargin){
 				target.v.y = -target.v.y;
 			}
