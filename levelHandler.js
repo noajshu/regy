@@ -1,7 +1,16 @@
 console.log('hi');
 
 var url = $.url();
-console.log(url.attr('query').split('&')[0].split('=')[1]);
+
+
+var theLevel = 0;
+var queryLevel = url.attr('query').split('&')[0].split('=')[1];
+if(queryLevel == undefined){
+	theLevel = 0;
+}
+else{
+	theLevel = parseInt(queryLevel);
+}
 
 var cmdBox = document.getElementById("userCommand");
 var consoleDiv = document.getElementById("userConsole");
