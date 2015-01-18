@@ -12,13 +12,13 @@ function getRandomFactor() { //get random factor
 	return Math.random() + 0.5;
 }
 
-getrV(avgSpeed){
+function getrV(avgSpeed){
 	vel = avgSpeed * getRandomFactor();
 	angle = getRandomFactor() * 90;
 	return({x:Math.sin(vel), y:Math.cos(vel)});
 }
 
-getrP(){
+function getrP(){
 	return({x:0, y:c.height * getRandomFactor()/2});
 }
 
