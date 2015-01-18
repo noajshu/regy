@@ -19,7 +19,7 @@ var widthCat = heightCat * aspectCat;
 var sharkImg = new Image();
 sharkImg.src = "pixel_shark_1.png";
 var aspectShark = 1;
-var heightShark = c.height * 0.15;
+var heightShark = c.height * 0.25;
 var widthShark = heightShark * aspectShark;
 
 var yMargin = 15;
@@ -34,7 +34,7 @@ function addTarget(theType, theBody, speedAcross){
 
 // targetProperties = {evil:}
 
-var FPS = 60;
+var FPS = 50;
 
 function clearCanvas() {
 	ctx.clearRect (0, 0, c.width, c.height);
