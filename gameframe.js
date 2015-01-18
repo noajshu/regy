@@ -278,13 +278,13 @@ cmdBox.addEventListener("keydown", function (event) {
 function Win() {
 // should congratulate winner
 	console.log("winner");
-	window.location = "?level="+(theLevel + 1).toString();
+	window.setTimeout(function() {window.location = "?level="+(theLevel + 1).toString();}, 600);
 }
 
 function Lose() {
 // should shame loser
 	console.log("lost");
-	window.location = "?level="+(theLevel).toString();
+	window.setTimeout(function() {window.location = "?level="+(theLevel).toString();}, 600 );
 }
 
 
