@@ -14,7 +14,7 @@ var catImg = new Image();
 catImg.src = "pixel_cat_1.png";
 var aspectCat = 1.56;
 var heightCat = c.height * 0.15;
-var widthCat = heightCat / aspectCat;
+var widthCat = heightCat * aspectCat;
 
 var sharkImg = new Image();
 sharkImg.src = "pixel_shark_1.png";
@@ -50,10 +50,10 @@ function loopOnTargets(func) {
 
 function drawTarget(target) {
 	if(target.type == "evil"){
-		ctx.drawImage(sharkImg, target.pos.x, target.pos.y, widthCat, heightCat);
+		ctx.drawImage(sharkImg, target.pos.x, target.pos.y, widthShark, heightShark);
 	}
 	else if(target.type == "good") {
-		ctx.drawImage(catImg, target.pos.x, target.pos.y, widthShark, heightShark);
+		ctx.drawImage(catImg, target.pos.x, target.pos.y, widthCat, heightCat);
 	}
 
 	ctx.strokeText(target.body, target.pos.x, target.pos.y);
