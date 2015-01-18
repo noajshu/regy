@@ -53,7 +53,7 @@ function avgCat(theBody) {
 
 
 var level0 = {levelTargets:[avgShark("evil_shark")], levelInfo:"This is an evil shark. Kill it by typing a substring of evil_shark, its name."};
-var level1 = {levelTargets:[avgCat("nice_cat")], levelInfo:"Type nothing--do not kill the cat"};
+var level1 = {levelTargets:[avgCat("nice_cat")], levelInfo:"Type nothing. Do not kill the cat"};
 var level2 = {levelTargets:[avgCat("animal0"), avgShark("animal1")], levelInfo:"Kill the shark, but let the cat cross"};
 var level3 = {levelTargets:[avgCat("animal0"), avgShark("animal1"), avgShark("1animal"), avgShark("ani1mal"), avgShark("anima1l")], levelInfo:"You must eliminate all sharks, but don't harm the cats."};
 var level4 = {levelTargets:[avgShark("00"), avgShark("10"), acgCat("001011"), avgShark("11"), avgShark("01"), avgShark("11")], levelInfo:"Try using the \d character, which represents a single digit."};
