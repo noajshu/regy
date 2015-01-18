@@ -6,8 +6,7 @@ var userView = document.getElementById("userView");
 
 var c = document.getElementById("userCanvas");
 var ctx = c.getContext("2d");
-ctx.fillStyle = "#FFA319";
-ctx.font = "10px Arial";
+
 
 var catImg = new Image();
 catImg.src = "pixel_cat_1.png";
@@ -58,7 +57,9 @@ function drawTarget(target) {
 		ctx.drawImage(catImg, target.pos.x - widthCat/2, target.pos.y - heightCat/2, widthCat, heightCat);
 	}
 
-	ctx.strokeText(target.body, target.pos.x, target.pos.y);
+	ctx.fillStyle = "#FFA319";
+	ctx.font = "10px Arial";
+	ctx.fillText(target.body, target.pos.x, target.pos.y);
 }
 
 function reDraw() {
