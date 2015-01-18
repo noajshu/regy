@@ -25,8 +25,8 @@ function getrP(){
 	return({x:0, y:document.getElementById("userCanvas").height * getRandomFactor()/2});
 }
 
-var sharkAvgSpeed = 20;
-var catAvgSpeed = 17;
+var sharkAvgSpeed = 2;
+var catAvgSpeed = 1.7;
 
 var level0 = {levelTargets:[{v:getrV(sharkAvgSpeed), pos:getrP(), type:"evil", body:"shark" }], levelInfo:"Type shark"};
 
