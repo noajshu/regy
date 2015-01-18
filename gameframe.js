@@ -37,8 +37,8 @@ function getrP(){
 	return({x:0, y:document.getElementById("userCanvas").height * getRandomFactor()/2});
 }
 
-var sharkAvgSpeed = 2;
-var catAvgSpeed = 1.7;
+var sharkAvgSpeed = 4;
+var catAvgSpeed = 3;
 
 function avgShark(theBody) {
 	return {v:getrV(sharkAvgSpeed), pos:getrP(), type:"evil", body:theBody };
